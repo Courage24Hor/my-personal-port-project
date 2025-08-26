@@ -7,6 +7,26 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+// Find the form by its name
+const contactForm = document.querySelector('form[name="portfolioContact"]');
+
+contactForm.addEventListener('submit', function() { // Removed the 'event' parameter
+    // 1. Get the values
+    const nameValue = document.getElementById('name').value;
+    const confirmationDiv = document.getElementById('form-confirmation');
+    const userNameSpan = document.getElementById('user-name');
+
+    // 2. Show the message and clear the form
+    if (nameValue !== '') {
+        userNameSpan.textContent = nameValue;
+        confirmationDiv.classList.remove('hidden');
+        contactForm.reset();
+    }
+    
+    // 3. DO NOT prevent default. Let it submit to Netlify!
+    // The page will refresh, but the user sees the message first.
+});
+
 
 /* const contactForm = document.getElementById('form-id');
 
@@ -40,5 +60,6 @@ contactForm.addEventListener('submit', function(event) {
         }, 5000);
     }
 }); */
+
 
 
