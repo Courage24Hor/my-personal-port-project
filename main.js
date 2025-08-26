@@ -8,7 +8,7 @@ backToTopButton.addEventListener('click', () => {
 });
 
 
-const contactForm = document.getElementById('form-id');
+/* const contactForm = document.getElementById('form-id');
 
 contactForm.addEventListener('submit', function(event) {
     
@@ -39,5 +39,6 @@ contactForm.addEventListener('submit', function(event) {
             confirmationDiv.classList.add('hidden');
         }, 5000);
     }
-});
+}); */
+
 
