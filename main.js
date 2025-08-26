@@ -8,16 +8,36 @@ backToTopButton.addEventListener('click', () => {
 });
 
 
-// 1. Get the form by its name. This returns a COLLECTION.
-const formCollection = document.getElementsByName('portfolioContact');
+const contactForm = document.getElementById('form-id');
 
-// 2. Get the first (and should be only) form from the collection
-const contactForm = formCollection[0];
-
-// 3. Now add the event listener to that single form element
 contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Keep this for now for the test
+    
+    // stop the form from refreshing the page
+    event.preventDefault();
+    
+    const nameValue = document.getElementById('name').value;
+    const emailValue = document.getElementById('email').value;
+    const messageValue = document.getElementById('message').value;
 
-    // ... the rest of your code for the success message ...
+    const confirmationDiv = document.getElementById('form-confirmation');
+    const userNameSpan = document.getElementById('user-name');
+    
+    // checking if the name is empty or has a value
+        if (nameValue === '') {
+        alert('Please enter your name before sending.');
+    } else {
+        // insert the user's name into the <span>
+        userNameSpan.textContent = nameValue;
+
+        // remove the .hidden class to show the message
+        confirmationDiv.classList.remove('hidden');
+
+        contactForm.reset();
+
+        // hide the message after 5 seconds
+        setTimeout(() => {
+            confirmationDiv.classList.add('hidden');
+        }, 5000);
+    }
 });
 
