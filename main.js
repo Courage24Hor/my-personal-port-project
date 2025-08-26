@@ -20,7 +20,6 @@ contactForm.addEventListener('submit', function() { // Removed the 'event' param
     if (nameValue !== '') {
         userNameSpan.textContent = nameValue;
         confirmationDiv.classList.remove('hidden');
-        contactForm.reset();
     }
     
     // 3. DO NOT prevent default. Let it submit to Netlify!
@@ -60,6 +59,7 @@ contactForm.addEventListener('submit', function(event) {
         }, 5000);
     }
 }); */
+
 
 
 
