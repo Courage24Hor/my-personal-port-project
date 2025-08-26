@@ -88,7 +88,11 @@
     <!-- Form section -->
         <div id="contact">
             <h2>Contact</h2>
-            <form id="form-id" name="portfolioContact" netlify>
+            <form id="form-id" name="portfolioContact" netlify action="/">
+                <!-- Non negotiable line -->
+                <input type="hidden" name="form-name" value="portfolioContact" />
+
+                <!-- form actual beginning -->
                 <label for="name">Enter your full name here:</label>
                 <input type="text" name="name" id="name" >
                 <br>
@@ -121,6 +125,7 @@
 </footer>
 
 </html>
+
 
 
 
