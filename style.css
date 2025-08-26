@@ -1,7 +1,9 @@
 body {
     max-width: 1200px;
+    line-height: 1.6;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0;
+    padding: 20px;
     background: lavenderblush;
     color: #333;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -95,4 +97,5 @@ p {
     .project-card {
         margin-bottom: 1.5rem; /* Control space between project cards */
     }
+
 
