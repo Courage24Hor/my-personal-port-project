@@ -36,6 +36,11 @@ h2 {
     font-weight: 500;
 }
 
+h1:hover, h2:hover {
+    color: #1a5f7a;
+    cursor: pointer;
+}
+
 form {
     display: grid;
 }
@@ -72,3 +77,4 @@ p {
     display: none;
 
 }
+
