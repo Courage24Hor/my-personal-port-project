@@ -98,4 +98,19 @@ p {
         margin-bottom: 1.5rem; /* Control space between project cards */
     }
 
+    /* Center only the main header/introduction */
+#introduction {
+    text-align: center;
+}
+
+/* Left-align all other content for better readability */
+#aboutme, .projects, #contact, .project-card {
+    text-align: left;
+}
+
+/* Optional: Add max-width to text containers for optimal line length */
+#aboutme p, #aboutme div, .project-card p {
+    max-width: 65ch; /* Professional typography standard */
+}
+
 
