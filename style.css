@@ -98,19 +98,22 @@ p {
         margin-bottom: 1.5rem; /* Control space between project cards */
     }
 
-    /* Center only the main header/introduction */
-#introduction {
-    text-align: center;
+/* FORCE left alignment for content sections */
+#aboutme, 
+#aboutme p, 
+#aboutme div, 
+.projects, 
+#contact, 
+.project-card, 
+.project-card p {
+    text-align: left !important;
 }
 
-/* Left-align all other content for better readability */
-#aboutme, .projects, #contact, .project-card {
-    text-align: left;
-}
-
-/* Optional: Add max-width to text containers for optimal line length */
-#aboutme p, #aboutme div, .project-card p {
-    max-width: 65ch; /* Professional typography standard */
+/* FORCE center alignment only for the introduction */
+#introduction, 
+#introduction h1, 
+#introduction h2 {
+    text-align: center !important;
 }
 
 
